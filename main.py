@@ -62,11 +62,11 @@ while True:
 
 		data = stream.read(CHUNK)
 		rms = audioop.rms(data, 2)
-		if ((rms>7000) and (rms<8000)):
+		if ((rms>7000) and (rms<9000)):
 			if (isOn == 0): 
 				isOn = 1
 			elif (isOn == 1):
 				isOn = 0
 			print(isOn)
 	except KeyboardInterrupt:
-		print("okay done")
+		print("Ended process.")
